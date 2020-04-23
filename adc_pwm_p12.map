@@ -1,0 +1,271 @@
+HI-TECH Software C Compiler 
+
+Linker command line:
+
+--edf=C:\Program Files (x86)\HI-TECH Software\PICC\9.80\dat\en_msgs.txt -cs \
+  -h+adc_pwm_p12.sym -z -Q12F683 -ol.obj -Madc_pwm_p12.map -E1 \
+  -ACONST=00h-0FFhx8 -ACODE=00h-07FFh -ASTRCODE=00h-07FFh \
+  -AENTRY=00h-0FFhx8 -ASTRING=00h-0FFhx8 -ABANK0=020h-06Fh \
+  -ABANK1=0A0h-0BFh -ARAM=020h-06Fh,0A0h-0BFh -AABS1=020h-07Fh,0A0h-0BFh \
+  -ACOMMON=070h-07Fh -ASFR0=00h-01Fh -ASFR1=080h-09Fh \
+  -preset_vec=00h,intentry,init,end_init -ppowerup=CODE -pfunctab=CODE \
+  -ACONFIG=02007h-02007h -pconfig=CONFIG -DCONFIG=2 -AIDLOC=02000h-02003h \
+  -pidloc=IDLOC -DIDLOC=2 -AEEDATA=00h-0FFh/02100h -peeprom_data=EEDATA \
+  -DEEDATA=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 -k \
+  startup.obj adc_pwm_p12.obj 
+
+Object code version is 3.10
+
+Machine type is 12F683
+
+
+
+                Name                               Link     Load   Length Selector   Space Scale
+startup.obj     end_init                              0        0        1        0       0
+adc_pwm_p12.obj config                             2007     2007        1     400E       0
+                text81                              5B0      5B0        8      B60       0
+                text80                              5AA      5AA        6      B54       0
+                text79                              5B8      5B8       11      B70       0
+                text78                              5C9      5C9       1A      B92       0
+                text77                              5A1      5A1        4      B42       0
+                text76                              5A5      5A5        5      B4A       0
+                maintext                            5E3      5E3      21D      BC6       0
+                cstackCOMMON                         70       70        8       70       1
+                cinit                               59F      59F        2      B3E       0
+
+TOTAL           Name                               Link     Load   Length     Space
+        CLASS   CONST          
+
+        CLASS   CODE           
+                end_init                              0        0        1         0
+                text81                              5B0      5B0        8         0
+                text80                              5AA      5AA        6         0
+                text79                              5B8      5B8       11         0
+                text78                              5C9      5C9       1A         0
+                text77                              5A1      5A1        4         0
+                text76                              5A5      5A5        5         0
+                maintext                            5E3      5E3      21D         0
+                cinit                               59F      59F        2         0
+
+        CLASS   STRCODE        
+
+        CLASS   ENTRY          
+
+        CLASS   STRING         
+
+        CLASS   BANK0          
+
+        CLASS   BANK1          
+
+        CLASS   RAM            
+
+        CLASS   ABS1           
+                abs_s1                               7E       7E        2         1
+
+        CLASS   COMMON         
+                cstackCOMMON                         70       70        8         1
+
+        CLASS   SFR0           
+
+        CLASS   SFR1           
+
+        CLASS   CONFIG         
+                config                             2007     2007        1         0
+
+        CLASS   IDLOC          
+
+        CLASS   EEDATA         
+
+
+
+SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
+
+                reset_vec                      000000  000001  000001         0       0  CODE        2
+                cstackCOMMON                   000070  000008  000078        70       1  COMMON      1
+                cinit                          00059F  000002  0005A1       B3E       0  CODE        2
+                text77                         0005A1  000004  0005A5       B42       0  CODE        2
+                text76                         0005A5  000005  0005AA       B4A       0  CODE        2
+                text80                         0005AA  000006  0005B0       B54       0  CODE        2
+                text81                         0005B0  000008  0005B8       B60       0  CODE        2
+                text79                         0005B8  000011  0005C9       B70       0  CODE        2
+                text78                         0005C9  00001A  0005E3       B92       0  CODE        2
+                maintext                       0005E3  00021D  000800       BC6       0  CODE        2
+                config                         002007  000001  002008      400E       0  CONFIG      2
+
+
+UNUSED ADDRESS RANGES
+
+        Name                Unused          Largest block    Delta
+        BANK0            0020-006F             50           1
+        BANK1            00A0-00BF             20           1
+        CODE             0001-059E            59E           2
+        COMMON           0078-007D              6           1
+        CONST            0001-059E            100           2
+        EEDATA           2100-21FF            100           2
+        ENTRY            0001-059E            100           2
+        IDLOC            2000-2003              4           2
+        RAM              0020-006F             50           1
+                         00A0-00BF             20
+        SFR0             0000-001F             20           1
+        SFR1             0080-009F             20           1
+        STRCODE          0001-059E            59E           2
+        STRING           0001-059E            100           2
+
+                                  Symbol Table
+
+??_ADC_Init            cstackCOMMON 0070
+??_Delay               cstackCOMMON 0072
+??_Get_Ad              cstackCOMMON 0072
+??_Init                cstackCOMMON 0070
+??_PWM_Open            cstackCOMMON 0070
+??_Time2_Config        cstackCOMMON 0070
+??_main                cstackCOMMON 0076
+?_ADC_Init             cstackCOMMON 0070
+?_Delay                cstackCOMMON 0070
+?_Get_Ad               cstackCOMMON 0070
+?_Init                 cstackCOMMON 0070
+?_PWM_Open             cstackCOMMON 0070
+?_Time2_Config         cstackCOMMON 0070
+?_main                 cstackCOMMON 0070
+Delay@a                cstackCOMMON 0072
+Delay@b                cstackCOMMON 0074
+Delay@x                cstackCOMMON 0070
+Get_Ad@adval           cstackCOMMON 0073
+_ADCON0                (abs)        001F
+_ADC_Init              text80       05AA
+_ADRESH                (abs)        001E
+_ADRESL                (abs)        009E
+_ANSEL                 (abs)        009F
+_CCP1CON               (abs)        0015
+_CCPR1L                (abs)        0013
+_Delay                 text78       05C9
+_GODONE                (abs)        00F9
+_GPIO2                 (abs)        002A
+_Get_Ad                text79       05B8
+_Init                  text81       05B0
+_OSCCON                (abs)        008F
+_PR2                   (abs)        0092
+_PWM_Open              text76       05A5
+_T2CON                 (abs)        0012
+_TRISIO2               (abs)        042A
+_TRISIO4               (abs)        042C
+_Time2_Config          text77       05A1
+__Habs1                abs1         0000
+__Hbank0               bank0        0000
+__Hbank1               bank1        0000
+__Hcinit               cinit        0000
+__Hclrtext             clrtext      0000
+__Hcode                code         0000
+__Hcommon              common       0000
+__Hconfig              config       2008
+__HcstackCOMMON        cstackCOMMON 0000
+__Heeprom_data         eeprom_data  0000
+__Hend_init            end_init     0001
+__Hfunctab             functab      0000
+__Hidloc               idloc        0000
+__Hinit                init         0000
+__Hintentry            intentry     0000
+__Hmaintext            maintext     0000
+__Hpa_nodes            pa_nodes     0000
+__Hpowerup             powerup      0000
+__Hram                 ram          0000
+__Hreset_vec           reset_vec    0000
+__Hsfr0                sfr0         0000
+__Hsfr1                sfr1         0000
+__Hstrings             strings      0000
+__Htext                text         0000
+__Labs1                abs1         0000
+__Lbank0               bank0        0000
+__Lbank1               bank1        0000
+__Lcinit               cinit        0000
+__Lclrtext             clrtext      0000
+__Lcode                code         0000
+__Lcommon              common       0000
+__Lconfig              config       2007
+__LcstackCOMMON        cstackCOMMON 0000
+__Leeprom_data         eeprom_data  0000
+__Lend_init            end_init     0000
+__Lfunctab             functab      0000
+__Lidloc               idloc        0000
+__Linit                init         0000
+__Lintentry            intentry     0000
+__Lmaintext            maintext     0000
+__Lpa_nodes            pa_nodes     0000
+__Lpowerup             powerup      0000
+__Lram                 ram          0000
+__Lreset_vec           reset_vec    0000
+__Lsfr0                sfr0         0000
+__Lsfr1                sfr1         0000
+__Lstrings             strings      0000
+__Ltext                text         0000
+__S0                   (abs)        2008
+__S1                   (abs)        0078
+__S2                   (abs)        0000
+__end_of_ADC_Init      text80       05B0
+__end_of_Delay         text78       05E3
+__end_of_Get_Ad        text79       05C9
+__end_of_Init          text81       05B8
+__end_of_PWM_Open      text76       05AA
+__end_of_Time2_Config  text77       05A5
+__end_of_main          maintext     0800
+__pcstackCOMMON        cstackCOMMON 0070
+__pmaintext            maintext     05E3
+__ptext75              text75       0000
+__ptext76              text76       05A5
+__ptext77              text77       05A1
+__ptext78              text78       05C9
+__ptext79              text79       05B8
+__ptext80              text80       05AA
+__ptext81              text81       05B0
+__ptext82              text82       0000
+__size_of_ADC_Init     (abs)        0000
+__size_of_Delay        (abs)        0000
+__size_of_Get_Ad       (abs)        0000
+__size_of_Init         (abs)        0000
+__size_of_PWM_Open     (abs)        0000
+__size_of_Time2_Config (abs)        0000
+__size_of_main         (abs)        0000
+_exit                  init         0000
+_main                  maintext     05E3
+btemp                  (abs)        007E
+end_of_initialization  cinit        059F
+intlevel0              functab      0000
+intlevel1              functab      0000
+intlevel2              functab      0000
+intlevel3              functab      0000
+intlevel4              functab      0000
+intlevel5              functab      0000
+l1034                                   
+l1036                                   
+l1044                                   
+l446                                    
+l449                                    
+l455                                    
+l458                                    
+l461                                    
+l830                                    
+l832                                    
+l834                                    
+l836                                    
+l838                                    
+l840                                    
+l846                                    
+l860                                    
+l866                                    
+l868                                    
+l870                                    
+l872                                    
+l874                                    
+l876                                    
+l882                                    
+l884                                    
+l896                                    
+l898                                    
+l938                                    
+l940                                    
+l966                                    
+main@adnum             cstackCOMMON 0076
+reset_vec              reset_vec    0000
+start                  init         0000
+start_initialization   cinit        059F
+wtemp0                 (abs)        007E
