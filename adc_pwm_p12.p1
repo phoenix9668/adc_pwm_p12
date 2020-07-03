@@ -352,17 +352,17 @@ Version 3.2 HI-TECH Software Intermediate Code
 "237 C:\Program Files (x86)\HI-TECH Software\PICC\9.80\include\pic12f683.h
 [v _ADCS2 `Vb 1 e@1278 ]
 [p mainexit ]
-"12 D:\STM32\PIC\adc_pwm_p12\adc_pwm_p12.c
+"12 D:\GitHub\adc_pwm_p12\adc_pwm_p12.c
 [v _Init `(v 0 ef ]
-"13 D:\STM32\PIC\adc_pwm_p12\adc_pwm_p12.c
+"13 D:\GitHub\adc_pwm_p12\adc_pwm_p12.c
 [v _ADC_Init `(v 0 ef ]
-"14 D:\STM32\PIC\adc_pwm_p12\adc_pwm_p12.c
+"14 D:\GitHub\adc_pwm_p12\adc_pwm_p12.c
 [v _Get_Ad `(ui 0 ef ]
-"11 D:\STM32\PIC\adc_pwm_p12\adc_pwm_p12.c
+"11 D:\GitHub\adc_pwm_p12\adc_pwm_p12.c
 [v _Delay `(v 0 ef1`ui ]
-"16 D:\STM32\PIC\adc_pwm_p12\adc_pwm_p12.c
+"16 D:\GitHub\adc_pwm_p12\adc_pwm_p12.c
 [v _Time2_Config `(v 0 ef ]
-"15 D:\STM32\PIC\adc_pwm_p12\adc_pwm_p12.c
+"15 D:\GitHub\adc_pwm_p12\adc_pwm_p12.c
 [v _PWM_Open `(v 0 ef ]
 [; ;pic12f683.h: 15: volatile unsigned char INDF @ 0x00;
 [; ;pic12f683.h: 16: volatile unsigned char TMR0 @ 0x01;
@@ -544,7 +544,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eeprom_routines.h: 41: extern void eeprom_write(unsigned char addr, unsigned char value);
 [; ;eeprom_routines.h: 42: extern unsigned char eeprom_read(unsigned char addr);
 [; ;pic.h: 630: extern void _delay(unsigned long);
-"4 D:\STM32\PIC\adc_pwm_p12\adc_pwm_p12.c
+"4 D:\GitHub\adc_pwm_p12\adc_pwm_p12.c
 [; ;adc_pwm_p12.c: 4: asm("\tpsect config,class=CONFIG,delta=2"); asm("\tdw ""0x3F34");
 [; 	psect config,class=CONFIG,delta=2 ;#
 [; 	dw 0x3F34 ;#
@@ -573,9 +573,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;adc_pwm_p12.c: 25: adnum=Get_Ad();
 "25
 [e = _adnum ( _Get_Ad ..  ]
-[; ;adc_pwm_p12.c: 26: if(adnum > 204)
+[; ;adc_pwm_p12.c: 26: if(adnum > 210)
 "26
-[e $ ! > _adnum -> -> 204 `i `ui 2  ]
+[e $ ! > _adnum -> -> 210 `i `ui 2  ]
 [; ;adc_pwm_p12.c: 27: {GPIO2=1;}
 "27
 {
@@ -597,9 +597,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;adc_pwm_p12.c: 32: adnum=Get_Ad();
 "32
 [e = _adnum ( _Get_Ad ..  ]
-[; ;adc_pwm_p12.c: 35: if(adnum > 204 && adnum <= 286)
+[; ;adc_pwm_p12.c: 35: if(adnum > 210 && adnum <= 310)
 "35
-[e $ ! && > _adnum -> -> 204 `i `ui <= _adnum -> -> 286 `i `ui 4  ]
+[e $ ! && > _adnum -> -> 210 `i `ui <= _adnum -> -> 310 `i `ui 4  ]
 [; ;adc_pwm_p12.c: 36: {GPIO2=1;}
 "36
 {
@@ -608,8 +608,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 5  ]
 "37
 [e :U 4 ]
-[; ;adc_pwm_p12.c: 37: else if(adnum > 286 && adnum <= 450)
-[e $ ! && > _adnum -> -> 286 `i `ui <= _adnum -> -> 450 `i `ui 6  ]
+[; ;adc_pwm_p12.c: 37: else if(adnum > 310 && adnum <= 450)
+[e $ ! && > _adnum -> -> 310 `i `ui <= _adnum -> -> 450 `i `ui 6  ]
 [; ;adc_pwm_p12.c: 38: {
 "38
 {
@@ -622,9 +622,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;adc_pwm_p12.c: 41: PR2 = 249;
 "41
 [e = _PR2 -> -> 249 `i `uc ]
-[; ;adc_pwm_p12.c: 42: if(adnum <= 310)
+[; ;adc_pwm_p12.c: 42: if(adnum <= 330)
 "42
-[e $ ! <= _adnum -> -> 310 `i `ui 7  ]
+[e $ ! <= _adnum -> -> 330 `i `ui 7  ]
 [; ;adc_pwm_p12.c: 43: {CCPR1L = 190;}
 "43
 {
@@ -633,8 +633,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 8  ]
 "44
 [e :U 7 ]
-[; ;adc_pwm_p12.c: 44: else if(adnum > 310 && adnum <= 333)
-[e $ ! && > _adnum -> -> 310 `i `ui <= _adnum -> -> 333 `i `ui 9  ]
+[; ;adc_pwm_p12.c: 44: else if(adnum > 330 && adnum <= 350)
+[e $ ! && > _adnum -> -> 330 `i `ui <= _adnum -> -> 350 `i `ui 9  ]
 [; ;adc_pwm_p12.c: 45: {CCPR1L = 180;}
 "45
 {
@@ -643,8 +643,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 10  ]
 "46
 [e :U 9 ]
-[; ;adc_pwm_p12.c: 46: else if(adnum > 333 && adnum <= 356)
-[e $ ! && > _adnum -> -> 333 `i `ui <= _adnum -> -> 356 `i `ui 11  ]
+[; ;adc_pwm_p12.c: 46: else if(adnum > 350 && adnum <= 370)
+[e $ ! && > _adnum -> -> 350 `i `ui <= _adnum -> -> 370 `i `ui 11  ]
 [; ;adc_pwm_p12.c: 47: {CCPR1L = 170;}
 "47
 {
@@ -653,8 +653,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 12  ]
 "48
 [e :U 11 ]
-[; ;adc_pwm_p12.c: 48: else if(adnum > 356 && adnum <= 380)
-[e $ ! && > _adnum -> -> 356 `i `ui <= _adnum -> -> 380 `i `ui 13  ]
+[; ;adc_pwm_p12.c: 48: else if(adnum > 370 && adnum <= 390)
+[e $ ! && > _adnum -> -> 370 `i `ui <= _adnum -> -> 390 `i `ui 13  ]
 [; ;adc_pwm_p12.c: 49: {CCPR1L = 160;}
 "49
 {
@@ -663,8 +663,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 14  ]
 "50
 [e :U 13 ]
-[; ;adc_pwm_p12.c: 50: else if(adnum > 380 && adnum <= 403)
-[e $ ! && > _adnum -> -> 380 `i `ui <= _adnum -> -> 403 `i `ui 15  ]
+[; ;adc_pwm_p12.c: 50: else if(adnum > 390 && adnum <= 410)
+[e $ ! && > _adnum -> -> 390 `i `ui <= _adnum -> -> 410 `i `ui 15  ]
 [; ;adc_pwm_p12.c: 51: {CCPR1L = 150;}
 "51
 {
@@ -673,8 +673,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 16  ]
 "52
 [e :U 15 ]
-[; ;adc_pwm_p12.c: 52: else if(adnum > 403 && adnum <= 426)
-[e $ ! && > _adnum -> -> 403 `i `ui <= _adnum -> -> 426 `i `ui 17  ]
+[; ;adc_pwm_p12.c: 52: else if(adnum > 410 && adnum <= 430)
+[e $ ! && > _adnum -> -> 410 `i `ui <= _adnum -> -> 430 `i `ui 17  ]
 [; ;adc_pwm_p12.c: 53: {CCPR1L = 140;}
 "53
 {
@@ -784,18 +784,18 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;adc_pwm_p12.c: 75: Delay(15);
 "75
 [e ( _Delay (1 -> -> 15 `i `ui ]
-[; ;adc_pwm_p12.c: 78: if(adnum > 286 && adnum <= 450)
+[; ;adc_pwm_p12.c: 78: if(adnum > 310 && adnum <= 450)
 "78
-[e $ ! && > _adnum -> -> 286 `i `ui <= _adnum -> -> 450 `i `ui 30  ]
+[e $ ! && > _adnum -> -> 310 `i `ui <= _adnum -> -> 450 `i `ui 30  ]
 [; ;adc_pwm_p12.c: 79: {
 "79
 {
 [; ;adc_pwm_p12.c: 80: PR2 = 50;
 "80
 [e = _PR2 -> -> 50 `i `uc ]
-[; ;adc_pwm_p12.c: 81: if(adnum <= 310)
+[; ;adc_pwm_p12.c: 81: if(adnum <= 330)
 "81
-[e $ ! <= _adnum -> -> 310 `i `ui 31  ]
+[e $ ! <= _adnum -> -> 330 `i `ui 31  ]
 [; ;adc_pwm_p12.c: 82: {CCPR1L = 25;}
 "82
 {
@@ -804,8 +804,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 32  ]
 "83
 [e :U 31 ]
-[; ;adc_pwm_p12.c: 83: else if(adnum > 310 && adnum <= 333)
-[e $ ! && > _adnum -> -> 310 `i `ui <= _adnum -> -> 333 `i `ui 33  ]
+[; ;adc_pwm_p12.c: 83: else if(adnum > 330 && adnum <= 350)
+[e $ ! && > _adnum -> -> 330 `i `ui <= _adnum -> -> 350 `i `ui 33  ]
 [; ;adc_pwm_p12.c: 84: {CCPR1L = 23;}
 "84
 {
@@ -814,8 +814,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 34  ]
 "85
 [e :U 33 ]
-[; ;adc_pwm_p12.c: 85: else if(adnum > 333 && adnum <= 356)
-[e $ ! && > _adnum -> -> 333 `i `ui <= _adnum -> -> 356 `i `ui 35  ]
+[; ;adc_pwm_p12.c: 85: else if(adnum > 350 && adnum <= 370)
+[e $ ! && > _adnum -> -> 350 `i `ui <= _adnum -> -> 370 `i `ui 35  ]
 [; ;adc_pwm_p12.c: 86: {CCPR1L = 21;}
 "86
 {
@@ -824,8 +824,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 36  ]
 "87
 [e :U 35 ]
-[; ;adc_pwm_p12.c: 87: else if(adnum > 356 && adnum <= 380)
-[e $ ! && > _adnum -> -> 356 `i `ui <= _adnum -> -> 380 `i `ui 37  ]
+[; ;adc_pwm_p12.c: 87: else if(adnum > 370 && adnum <= 390)
+[e $ ! && > _adnum -> -> 370 `i `ui <= _adnum -> -> 390 `i `ui 37  ]
 [; ;adc_pwm_p12.c: 88: {CCPR1L = 20;}
 "88
 {
@@ -834,8 +834,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 38  ]
 "89
 [e :U 37 ]
-[; ;adc_pwm_p12.c: 89: else if(adnum > 380 && adnum <= 403)
-[e $ ! && > _adnum -> -> 380 `i `ui <= _adnum -> -> 403 `i `ui 39  ]
+[; ;adc_pwm_p12.c: 89: else if(adnum > 390 && adnum <= 410)
+[e $ ! && > _adnum -> -> 390 `i `ui <= _adnum -> -> 410 `i `ui 39  ]
 [; ;adc_pwm_p12.c: 90: {CCPR1L = 19;}
 "90
 {
@@ -844,8 +844,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 40  ]
 "91
 [e :U 39 ]
-[; ;adc_pwm_p12.c: 91: else if(adnum > 403 && adnum <= 426)
-[e $ ! && > _adnum -> -> 403 `i `ui <= _adnum -> -> 426 `i `ui 41  ]
+[; ;adc_pwm_p12.c: 91: else if(adnum > 410 && adnum <= 430)
+[e $ ! && > _adnum -> -> 410 `i `ui <= _adnum -> -> 430 `i `ui 41  ]
 [; ;adc_pwm_p12.c: 92: {CCPR1L = 18;}
 "92
 {
@@ -942,9 +942,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;adc_pwm_p12.c: 112: adnum=Get_Ad();
 "112
 [e = _adnum ( _Get_Ad ..  ]
-[; ;adc_pwm_p12.c: 113: if(adnum > 204 && adnum <= 286)
+[; ;adc_pwm_p12.c: 113: if(adnum > 210 && adnum <= 310)
 "113
-[e $ ! && > _adnum -> -> 204 `i `ui <= _adnum -> -> 286 `i `ui 53  ]
+[e $ ! && > _adnum -> -> 210 `i `ui <= _adnum -> -> 310 `i `ui 53  ]
 [; ;adc_pwm_p12.c: 114: {
 "114
 {
@@ -967,51 +967,51 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;adc_pwm_p12.c: 121: adnum=Get_Ad();
 "121
 [e = _adnum ( _Get_Ad ..  ]
-[; ;adc_pwm_p12.c: 122: if(adnum > 204 && adnum <= 286)
+[; ;adc_pwm_p12.c: 122: if(adnum > 210 && adnum <= 310)
 "122
-[e $ ! && > _adnum -> -> 204 `i `ui <= _adnum -> -> 286 `i `ui 57  ]
+[e $ ! && > _adnum -> -> 210 `i `ui <= _adnum -> -> 310 `i `ui 57  ]
 [; ;adc_pwm_p12.c: 123: {
 "123
 {
 [; ;adc_pwm_p12.c: 124: PR2 = 50;
 "124
 [e = _PR2 -> -> 50 `i `uc ]
-[; ;adc_pwm_p12.c: 125: if(adnum <= 224)
+[; ;adc_pwm_p12.c: 125: if(adnum <= 235)
 "125
-[e $ ! <= _adnum -> -> 224 `i `ui 58  ]
-[; ;adc_pwm_p12.c: 126: {CCPR1L = 13;}
+[e $ ! <= _adnum -> -> 235 `i `ui 58  ]
+[; ;adc_pwm_p12.c: 126: {CCPR1L = 20;}
 "126
 {
-[e = _CCPR1L -> -> 13 `i `uc ]
+[e = _CCPR1L -> -> 20 `i `uc ]
 }
 [e $U 59  ]
 "127
 [e :U 58 ]
-[; ;adc_pwm_p12.c: 127: else if(adnum > 224 && adnum <= 244)
-[e $ ! && > _adnum -> -> 224 `i `ui <= _adnum -> -> 244 `i `ui 60  ]
-[; ;adc_pwm_p12.c: 128: {CCPR1L = 12;}
+[; ;adc_pwm_p12.c: 127: else if(adnum > 235 && adnum <= 260)
+[e $ ! && > _adnum -> -> 235 `i `ui <= _adnum -> -> 260 `i `ui 60  ]
+[; ;adc_pwm_p12.c: 128: {CCPR1L = 19;}
 "128
 {
-[e = _CCPR1L -> -> 12 `i `uc ]
+[e = _CCPR1L -> -> 19 `i `uc ]
 }
 [e $U 61  ]
 "129
 [e :U 60 ]
-[; ;adc_pwm_p12.c: 129: else if(adnum > 244 && adnum <= 264)
-[e $ ! && > _adnum -> -> 244 `i `ui <= _adnum -> -> 264 `i `ui 62  ]
-[; ;adc_pwm_p12.c: 130: {CCPR1L = 11;}
+[; ;adc_pwm_p12.c: 129: else if(adnum > 260 && adnum <= 285)
+[e $ ! && > _adnum -> -> 260 `i `ui <= _adnum -> -> 285 `i `ui 62  ]
+[; ;adc_pwm_p12.c: 130: {CCPR1L = 18;}
 "130
 {
-[e = _CCPR1L -> -> 11 `i `uc ]
+[e = _CCPR1L -> -> 18 `i `uc ]
 }
 [e $U 63  ]
 "131
 [e :U 62 ]
 [; ;adc_pwm_p12.c: 131: else
-[; ;adc_pwm_p12.c: 132: {CCPR1L = 10;}
+[; ;adc_pwm_p12.c: 132: {CCPR1L = 17;}
 "132
 {
-[e = _CCPR1L -> -> 10 `i `uc ]
+[e = _CCPR1L -> -> 17 `i `uc ]
 }
 [e :U 63 ]
 [e :U 61 ]
@@ -1022,17 +1022,17 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 64  ]
 "134
 [e :U 57 ]
-[; ;adc_pwm_p12.c: 134: else if(adnum > 286 && adnum <= 450)
-[e $ ! && > _adnum -> -> 286 `i `ui <= _adnum -> -> 450 `i `ui 65  ]
+[; ;adc_pwm_p12.c: 134: else if(adnum > 310 && adnum <= 450)
+[e $ ! && > _adnum -> -> 310 `i `ui <= _adnum -> -> 450 `i `ui 65  ]
 [; ;adc_pwm_p12.c: 135: {
 "135
 {
 [; ;adc_pwm_p12.c: 136: PR2 = 50;
 "136
 [e = _PR2 -> -> 50 `i `uc ]
-[; ;adc_pwm_p12.c: 137: if(adnum <= 368)
+[; ;adc_pwm_p12.c: 137: if(adnum <= 380)
 "137
-[e $ ! <= _adnum -> -> 368 `i `ui 66  ]
+[e $ ! <= _adnum -> -> 380 `i `ui 66  ]
 [; ;adc_pwm_p12.c: 138: {CCPR1L = 9;}
 "138
 {

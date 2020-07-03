@@ -74,7 +74,7 @@
 [v ___tmul `(um  1 e 3 0 ]
 "3 C:\Program Files (x86)\HI-TECH Software\PICC\9.80\sources\wmul.c
 [v ___wmul `(ui  1 e 2 0 ]
-"19 D:\STM32\PIC\adc_pwm_p12\adc_pwm_p12.c
+"19 D:\GitHub\adc_pwm_p12\adc_pwm_p12.c
 [v _main `(v  1 e 0 0 ]
 "155
 [v _Delay `(v  1 e 0 0 ]
@@ -440,7 +440,7 @@
 [v _ADCS1 `Vb  1 e 0 @1277 ]
 "237
 [v _ADCS2 `Vb  1 e 0 @1278 ]
-"19 D:\STM32\PIC\adc_pwm_p12\adc_pwm_p12.c
+"19 D:\GitHub\adc_pwm_p12\adc_pwm_p12.c
 [v _main `(v  1 e 0 0 ]
 {
 "20

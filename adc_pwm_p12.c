@@ -23,7 +23,7 @@ void main()
 	ADC_Init();
 
 	adnum=Get_Ad();
-	if(adnum > 204)//9V
+	if(adnum > 210)//8.6V
 	{GPIO2=1;}
 	else
 	{GPIO2=0;}
@@ -32,24 +32,24 @@ void main()
 	adnum=Get_Ad();
 
 	// stage one 15.2ms
-	if(adnum > 204 && adnum <= 286)
+	if(adnum > 210 && adnum <= 310)
 	{GPIO2=1;}
-	else if(adnum > 286 && adnum <= 450)////[(1.4V~2.2V)/5V]*1023  Vin = 13V~20V
+	else if(adnum > 310 && adnum <= 450)//[(1.4V~2.2V)/5V]*1023  Vin = 12.4V~20V
 	{
 		Time2_Config();
 		PWM_Open();
 		PR2 = 249;//stage one 250us
-		if(adnum <= 310)
+		if(adnum <= 330)
 		{CCPR1L = 190;}
-		else if(adnum > 310 && adnum <= 333)
+		else if(adnum > 330 && adnum <= 350)
 		{CCPR1L = 180;}
-		else if(adnum > 333 && adnum <= 356)
+		else if(adnum > 350 && adnum <= 370)
 		{CCPR1L = 170;}
-		else if(adnum > 356 && adnum <= 380)
+		else if(adnum > 370 && adnum <= 390)
 		{CCPR1L = 160;}
-		else if(adnum > 380 && adnum <= 403)
+		else if(adnum > 390 && adnum <= 410)
 		{CCPR1L = 150;}
-		else if(adnum > 403 && adnum <= 426)
+		else if(adnum > 410 && adnum <= 430)
 		{CCPR1L = 140;}
 		else
 		{CCPR1L = 130;}
@@ -75,20 +75,20 @@ void main()
 	Delay(15);//15ms
 
 	// stage two 82ms
-	if(adnum > 286 && adnum <= 450)
+	if(adnum > 310 && adnum <= 450)
 	{
 		PR2 = 50;//stage2 50us
-		if(adnum <= 310)
+		if(adnum <= 330)
 		{CCPR1L = 25;}
-		else if(adnum > 310 && adnum <= 333)
+		else if(adnum > 330 && adnum <= 350)
 		{CCPR1L = 23;}
-		else if(adnum > 333 && adnum <= 356)
+		else if(adnum > 350 && adnum <= 370)
 		{CCPR1L = 21;}
-		else if(adnum > 356 && adnum <= 380)
+		else if(adnum > 370 && adnum <= 390)
 		{CCPR1L = 20;}
-		else if(adnum > 380 && adnum <= 403)
+		else if(adnum > 390 && adnum <= 410)
 		{CCPR1L = 19;}
-		else if(adnum > 403 && adnum <= 426)
+		else if(adnum > 410 && adnum <= 430)
 		{CCPR1L = 18;}
 		else
 		{CCPR1L = 17;}
@@ -110,7 +110,7 @@ void main()
 	Delay(82);//82ms
 
 	adnum=Get_Ad();
-	if(adnum > 204 && adnum <= 286)
+	if(adnum > 210 && adnum <= 310)
 	{
 		Time2_Config();
 		PWM_Open();
@@ -119,22 +119,22 @@ void main()
 	while(1)
 	{
 		adnum=Get_Ad();
-		if(adnum > 204 && adnum <= 286)//[(1V~1.4V)/5V]*1023  Vin = 9V~13V
+		if(adnum > 210 && adnum <= 310)//[(1V~1.4V)/5V]*1023  Vin = 8.6V~12.4V
 		{
 			PR2 = 50;//50us
-			if(adnum <= 224)
-			{CCPR1L = 13;}
-			else if(adnum > 224 && adnum <= 244)
-			{CCPR1L = 12;}
-			else if(adnum > 244 && adnum <= 264)
-			{CCPR1L = 11;}
+			if(adnum <= 235)
+			{CCPR1L = 20;}
+			else if(adnum > 235 && adnum <= 260)
+			{CCPR1L = 19;}
+			else if(adnum > 260 && adnum <= 285)
+			{CCPR1L = 18;}
 			else
-			{CCPR1L = 10;}
+			{CCPR1L = 17;}
 		}
-		else if(adnum > 286 && adnum <= 450)//[(1.4V~2.2V)/5V]*1023  Vin = 13V~20V
+		else if(adnum > 310 && adnum <= 450)//[(1.4V~2.2V)/5V]*1023  Vin = 12.4V~20V
 		{
 			PR2 = 50;//stage2 50us
-			if(adnum <= 368)
+			if(adnum <= 380)
 			{CCPR1L = 9;}
 			else
 			{CCPR1L = 8;}

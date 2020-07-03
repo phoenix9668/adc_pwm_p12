@@ -1,7 +1,7 @@
 
 
 HI-TECH Software PIC PRO Macro Assembler V9.80 build 6738 
-                                                                                               Fri Apr 17 09:25:31 2020
+                                                                                               Wed May 20 17:51:25 2020
 
 HI-TECH Software Omniscient Code Generator (PRO mode) build 6738
      1                           	processor	12F683
@@ -203,7 +203,7 @@ HI-TECH Software Omniscient Code Generator (PRO mode) build 6738
    197                           
    198 ;; *************** function _main *****************
    199 ;; Defined at:
-   200 ;;		line 19 in file "D:\STM32\PIC\adc_pwm_p12\adc_pwm_p12.c"
+   200 ;;		line 19 in file "D:\GitHub\adc_pwm_p12\adc_pwm_p12.c"
    201 ;; Parameters:    Size  Location     Type
    202 ;;		None
    203 ;; Auto vars:     Size  Location     Type
@@ -252,10 +252,10 @@ HI-TECH Software Omniscient Code Generator (PRO mode) build 6738
    246  05E8  0870               	movf	?_Get_Ad,w
    247  05E9  00F6               	movwf	main@adnum
    248                           
-   249                           ;adc_pwm_p12.c: 26: if(adnum > 204)
+   249                           ;adc_pwm_p12.c: 26: if(adnum > 210)
    250  05EA  3000               	movlw	0
    251  05EB  0277               	subwf	main@adnum+1,w
-   252  05EC  30CD               	movlw	205
+   252  05EC  30D3               	movlw	211
    253  05ED  1903               	skipnz
    254  05EE  0276               	subwf	main@adnum,w
    255                           
@@ -285,17 +285,17 @@ HI-TECH Software Omniscient Code Generator (PRO mode) build 6738
    279  05FC  0870               	movf	?_Get_Ad,w
    280  05FD  00F6               	movwf	main@adnum
    281                           
-   282                           ;adc_pwm_p12.c: 35: if(adnum > 204 && adnum <= 286)
+   282                           ;adc_pwm_p12.c: 35: if(adnum > 210 && adnum <= 310)
    283  05FE  3000               	movlw	0
    284  05FF  0277               	subwf	main@adnum+1,w
-   285  0600  30CD               	movlw	205
+   285  0600  30D3               	movlw	211
    286  0601  1903               	skipnz
    287  0602  0276               	subwf	main@adnum,w
    288  0603  3001               	movlw	1
    289  0604  1C03               	skipc
    290  0605  2E10               	goto	L18
    291  0606  0277               	subwf	main@adnum+1,w
-   292  0607  301F               	movlw	31
+   292  0607  3037               	movlw	55
    293  0608  1903               	skipnz
    294  0609  0276               	subwf	main@adnum,w
    295  060A  1803               	skipnc
@@ -307,11 +307,11 @@ HI-TECH Software Omniscient Code Generator (PRO mode) build 6738
    301  060E  2EC6               	goto	l964
    302  060F                     l890:	
    303                           
-   304                           ;adc_pwm_p12.c: 37: else if(adnum > 286 && adnum <= 450)
+   304                           ;adc_pwm_p12.c: 37: else if(adnum > 310 && adnum <= 450)
    305  060F  3001               	movlw	1
    306  0610                     L18:	
    307  0610  0277               	subwf	main@adnum+1,w
-   308  0611  301F               	movlw	31
+   308  0611  3037               	movlw	55
    309  0612  1903               	skipnz
    310  0613  0276               	subwf	main@adnum,w
    311  0614  3001               	movlw	1
@@ -336,10 +336,10 @@ HI-TECH Software Omniscient Code Generator (PRO mode) build 6738
    330  0620  1683               	bsf	3,5	;RP0=1, select bank1
    331  0621  0092               	movwf	18	;volatile
    332                           
-   333                           ;adc_pwm_p12.c: 42: if(adnum <= 310)
+   333                           ;adc_pwm_p12.c: 42: if(adnum <= 330)
    334  0622  3001               	movlw	1
    335  0623  0277               	subwf	main@adnum+1,w
-   336  0624  3037               	movlw	55
+   336  0624  304B               	movlw	75
    337  0625  1903               	skipnz
    338  0626  0276               	subwf	main@adnum,w
    339  0627  1803               	skipnc
@@ -350,17 +350,17 @@ HI-TECH Software Omniscient Code Generator (PRO mode) build 6738
    344  062A  2EC1               	goto	L10
    345  062B                     l902:	
    346                           
-   347                           ;adc_pwm_p12.c: 44: else if(adnum > 310 && adnum <= 333)
+   347                           ;adc_pwm_p12.c: 44: else if(adnum > 330 && adnum <= 350)
    348  062B  3001               	movlw	1
    349  062C  0277               	subwf	main@adnum+1,w
-   350  062D  3037               	movlw	55
+   350  062D  304B               	movlw	75
    351  062E  1903               	skipnz
    352  062F  0276               	subwf	main@adnum,w
    353  0630  3001               	movlw	1
    354  0631  1C03               	skipc
    355  0632  2E3C               	goto	L20
    356  0633  0277               	subwf	main@adnum+1,w
-   357  0634  304E               	movlw	78
+   357  0634  305F               	movlw	95
    358  0635  1903               	skipnz
    359  0636  0276               	subwf	main@adnum,w
    360  0637  1803               	skipnc
@@ -371,18 +371,18 @@ HI-TECH Software Omniscient Code Generator (PRO mode) build 6738
    365  063A  2EC1               	goto	L10
    366  063B                     l908:	
    367                           
-   368                           ;adc_pwm_p12.c: 46: else if(adnum > 333 && adnum <= 356)
+   368                           ;adc_pwm_p12.c: 46: else if(adnum > 350 && adnum <= 370)
    369  063B  3001               	movlw	1
    370  063C                     L20:	
    371  063C  0277               	subwf	main@adnum+1,w
-   372  063D  304E               	movlw	78
+   372  063D  305F               	movlw	95
    373  063E  1903               	skipnz
    374  063F  0276               	subwf	main@adnum,w
    375  0640  3001               	movlw	1
    376  0641  1C03               	skipc
    377  0642  2E4C               	goto	L21
    378  0643  0277               	subwf	main@adnum+1,w
-   379  0644  3065               	movlw	101
+   379  0644  3073               	movlw	115
    380  0645  1903               	skipnz
    381  0646  0276               	subwf	main@adnum,w
    382  0647  1803               	skipnc
@@ -393,18 +393,18 @@ HI-TECH Software Omniscient Code Generator (PRO mode) build 6738
    387  064A  2EC1               	goto	L10
    388  064B                     l914:	
    389                           
-   390                           ;adc_pwm_p12.c: 48: else if(adnum > 356 && adnum <= 380)
+   390                           ;adc_pwm_p12.c: 48: else if(adnum > 370 && adnum <= 390)
    391  064B  3001               	movlw	1
    392  064C                     L21:	
    393  064C  0277               	subwf	main@adnum+1,w
-   394  064D  3065               	movlw	101
+   394  064D  3073               	movlw	115
    395  064E  1903               	skipnz
    396  064F  0276               	subwf	main@adnum,w
    397  0650  3001               	movlw	1
    398  0651  1C03               	skipc
    399  0652  2E5C               	goto	L22
    400  0653  0277               	subwf	main@adnum+1,w
-   401  0654  307D               	movlw	125
+   401  0654  3087               	movlw	135
    402  0655  1903               	skipnz
    403  0656  0276               	subwf	main@adnum,w
    404  0657  1803               	skipnc
@@ -415,18 +415,18 @@ HI-TECH Software Omniscient Code Generator (PRO mode) build 6738
    409  065A  2EC1               	goto	L10
    410  065B                     l920:	
    411                           
-   412                           ;adc_pwm_p12.c: 50: else if(adnum > 380 && adnum <= 403)
+   412                           ;adc_pwm_p12.c: 50: else if(adnum > 390 && adnum <= 410)
    413  065B  3001               	movlw	1
    414  065C                     L22:	
    415  065C  0277               	subwf	main@adnum+1,w
-   416  065D  307D               	movlw	125
+   416  065D  3087               	movlw	135
    417  065E  1903               	skipnz
    418  065F  0276               	subwf	main@adnum,w
    419  0660  3001               	movlw	1
    420  0661  1C03               	skipc
    421  0662  2E6C               	goto	L23
    422  0663  0277               	subwf	main@adnum+1,w
-   423  0664  3094               	movlw	148
+   423  0664  309B               	movlw	155
    424  0665  1903               	skipnz
    425  0666  0276               	subwf	main@adnum,w
    426  0667  1803               	skipnc
@@ -437,18 +437,18 @@ HI-TECH Software Omniscient Code Generator (PRO mode) build 6738
    431  066A  2EC1               	goto	L10
    432  066B                     l926:	
    433                           
-   434                           ;adc_pwm_p12.c: 52: else if(adnum > 403 && adnum <= 426)
+   434                           ;adc_pwm_p12.c: 52: else if(adnum > 410 && adnum <= 430)
    435  066B  3001               	movlw	1
    436  066C                     L23:	
    437  066C  0277               	subwf	main@adnum+1,w
-   438  066D  3094               	movlw	148
+   438  066D  309B               	movlw	155
    439  066E  1903               	skipnz
    440  066F  0276               	subwf	main@adnum,w
    441  0670  1C03               	skipc
    442  0671  2E7B               	goto	l932
    443  0672  3001               	movlw	1
    444  0673  0277               	subwf	main@adnum+1,w
-   445  0674  30AB               	movlw	171
+   445  0674  30AF               	movlw	175
    446  0675  1903               	skipnz
    447  0676  0276               	subwf	main@adnum,w
    448  0677  1803               	skipnc
@@ -582,10 +582,10 @@ HI-TECH Software Omniscient Code Generator (PRO mode) build 6738
    576  06C8  01F1               	clrf	?_Delay+1
    577  06C9  25C9               	fcall	_Delay
    578                           
-   579                           ;adc_pwm_p12.c: 78: if(adnum > 286 && adnum <= 450)
+   579                           ;adc_pwm_p12.c: 78: if(adnum > 310 && adnum <= 450)
    580  06CA  3001               	movlw	1
    581  06CB  0277               	subwf	main@adnum+1,w
-   582  06CC  301F               	movlw	31
+   582  06CC  3037               	movlw	55
    583  06CD  1903               	skipnz
    584  06CE  0276               	subwf	main@adnum,w
    585  06CF  3001               	movlw	1
@@ -604,10 +604,10 @@ HI-TECH Software Omniscient Code Generator (PRO mode) build 6738
    598  06D9  1683               	bsf	3,5	;RP0=1, select bank1
    599  06DA  0092               	movwf	18	;volatile
    600                           
-   601                           ;adc_pwm_p12.c: 81: if(adnum <= 310)
+   601                           ;adc_pwm_p12.c: 81: if(adnum <= 330)
    602  06DB  3001               	movlw	1
    603  06DC  0277               	subwf	main@adnum+1,w
-   604  06DD  3037               	movlw	55
+   604  06DD  304B               	movlw	75
    605  06DE  1903               	skipnz
    606  06DF  0276               	subwf	main@adnum,w
    607  06E0  1803               	skipnc
@@ -618,17 +618,17 @@ HI-TECH Software Omniscient Code Generator (PRO mode) build 6738
    612  06E3  2F7A               	goto	L11
    613  06E4                     l974:	
    614                           
-   615                           ;adc_pwm_p12.c: 83: else if(adnum > 310 && adnum <= 333)
+   615                           ;adc_pwm_p12.c: 83: else if(adnum > 330 && adnum <= 350)
    616  06E4  3001               	movlw	1
    617  06E5  0277               	subwf	main@adnum+1,w
-   618  06E6  3037               	movlw	55
+   618  06E6  304B               	movlw	75
    619  06E7  1903               	skipnz
    620  06E8  0276               	subwf	main@adnum,w
    621  06E9  3001               	movlw	1
    622  06EA  1C03               	skipc
    623  06EB  2EF5               	goto	L27
    624  06EC  0277               	subwf	main@adnum+1,w
-   625  06ED  304E               	movlw	78
+   625  06ED  305F               	movlw	95
    626  06EE  1903               	skipnz
    627  06EF  0276               	subwf	main@adnum,w
    628  06F0  1803               	skipnc
@@ -639,18 +639,18 @@ HI-TECH Software Omniscient Code Generator (PRO mode) build 6738
    633  06F3  2F7A               	goto	L11
    634  06F4                     l980:	
    635                           
-   636                           ;adc_pwm_p12.c: 85: else if(adnum > 333 && adnum <= 356)
+   636                           ;adc_pwm_p12.c: 85: else if(adnum > 350 && adnum <= 370)
    637  06F4  3001               	movlw	1
    638  06F5                     L27:	
    639  06F5  0277               	subwf	main@adnum+1,w
-   640  06F6  304E               	movlw	78
+   640  06F6  305F               	movlw	95
    641  06F7  1903               	skipnz
    642  06F8  0276               	subwf	main@adnum,w
    643  06F9  3001               	movlw	1
    644  06FA  1C03               	skipc
    645  06FB  2F05               	goto	L28
    646  06FC  0277               	subwf	main@adnum+1,w
-   647  06FD  3065               	movlw	101
+   647  06FD  3073               	movlw	115
    648  06FE  1903               	skipnz
    649  06FF  0276               	subwf	main@adnum,w
    650  0700  1803               	skipnc
@@ -661,18 +661,18 @@ HI-TECH Software Omniscient Code Generator (PRO mode) build 6738
    655  0703  2F7A               	goto	L11
    656  0704                     l986:	
    657                           
-   658                           ;adc_pwm_p12.c: 87: else if(adnum > 356 && adnum <= 380)
+   658                           ;adc_pwm_p12.c: 87: else if(adnum > 370 && adnum <= 390)
    659  0704  3001               	movlw	1
    660  0705                     L28:	
    661  0705  0277               	subwf	main@adnum+1,w
-   662  0706  3065               	movlw	101
+   662  0706  3073               	movlw	115
    663  0707  1903               	skipnz
    664  0708  0276               	subwf	main@adnum,w
    665  0709  3001               	movlw	1
    666  070A  1C03               	skipc
    667  070B  2F15               	goto	L29
    668  070C  0277               	subwf	main@adnum+1,w
-   669  070D  307D               	movlw	125
+   669  070D  3087               	movlw	135
    670  070E  1903               	skipnz
    671  070F  0276               	subwf	main@adnum,w
    672  0710  1803               	skipnc
@@ -683,18 +683,18 @@ HI-TECH Software Omniscient Code Generator (PRO mode) build 6738
    677  0713  2F7A               	goto	L11
    678  0714                     l992:	
    679                           
-   680                           ;adc_pwm_p12.c: 89: else if(adnum > 380 && adnum <= 403)
+   680                           ;adc_pwm_p12.c: 89: else if(adnum > 390 && adnum <= 410)
    681  0714  3001               	movlw	1
    682  0715                     L29:	
    683  0715  0277               	subwf	main@adnum+1,w
-   684  0716  307D               	movlw	125
+   684  0716  3087               	movlw	135
    685  0717  1903               	skipnz
    686  0718  0276               	subwf	main@adnum,w
    687  0719  3001               	movlw	1
    688  071A  1C03               	skipc
    689  071B  2F25               	goto	L30
    690  071C  0277               	subwf	main@adnum+1,w
-   691  071D  3094               	movlw	148
+   691  071D  309B               	movlw	155
    692  071E  1903               	skipnz
    693  071F  0276               	subwf	main@adnum,w
    694  0720  1803               	skipnc
@@ -705,18 +705,18 @@ HI-TECH Software Omniscient Code Generator (PRO mode) build 6738
    699  0723  2F7A               	goto	L11
    700  0724                     l998:	
    701                           
-   702                           ;adc_pwm_p12.c: 91: else if(adnum > 403 && adnum <= 426)
+   702                           ;adc_pwm_p12.c: 91: else if(adnum > 410 && adnum <= 430)
    703  0724  3001               	movlw	1
    704  0725                     L30:	
    705  0725  0277               	subwf	main@adnum+1,w
-   706  0726  3094               	movlw	148
+   706  0726  309B               	movlw	155
    707  0727  1903               	skipnz
    708  0728  0276               	subwf	main@adnum,w
    709  0729  1C03               	skipc
    710  072A  2F34               	goto	l1004
    711  072B  3001               	movlw	1
    712  072C  0277               	subwf	main@adnum+1,w
-   713  072D  30AB               	movlw	171
+   713  072D  30AF               	movlw	175
    714  072E  1903               	skipnz
    715  072F  0276               	subwf	main@adnum,w
    716  0730  1803               	skipnc
@@ -850,17 +850,17 @@ HI-TECH Software Omniscient Code Generator (PRO mode) build 6738
    844  0783  0870               	movf	?_Get_Ad,w
    845  0784  00F6               	movwf	main@adnum
    846                           
-   847                           ;adc_pwm_p12.c: 113: if(adnum > 204 && adnum <= 286)
+   847                           ;adc_pwm_p12.c: 113: if(adnum > 210 && adnum <= 310)
    848  0785  3000               	movlw	0
    849  0786  0277               	subwf	main@adnum+1,w
-   850  0787  30CD               	movlw	205
+   850  0787  30D3               	movlw	211
    851  0788  1903               	skipnz
    852  0789  0276               	subwf	main@adnum,w
    853  078A  1C03               	skipc
    854  078B  2FE3               	goto	l1042
    855  078C  3001               	movlw	1
    856  078D  0277               	subwf	main@adnum+1,w
-   857  078E  301F               	movlw	31
+   857  078E  3037               	movlw	55
    858  078F  1903               	skipnz
    859  0790  0276               	subwf	main@adnum,w
    860  0791  1803               	skipnc
@@ -876,7 +876,7 @@ HI-TECH Software Omniscient Code Generator (PRO mode) build 6738
    870  0796                     l1046:	
    871  0796  3001               	movlw	1
    872  0797  0277               	subwf	main@adnum+1,w
-   873  0798  301F               	movlw	31
+   873  0798  3037               	movlw	55
    874  0799  1903               	skipnz
    875  079A  0276               	subwf	main@adnum,w
    876  079B  1803               	skipnc
@@ -887,66 +887,66 @@ HI-TECH Software Omniscient Code Generator (PRO mode) build 6738
    881  079D  3032               	movlw	50
    882  079E  0092               	movwf	18	;volatile
    883                           
-   884                           ;adc_pwm_p12.c: 125: if(adnum <= 224)
+   884                           ;adc_pwm_p12.c: 125: if(adnum <= 235)
    885  079F  3000               	movlw	0
    886  07A0  0277               	subwf	main@adnum+1,w
-   887  07A1  30E1               	movlw	225
+   887  07A1  30EC               	movlw	236
    888  07A2  1903               	skipnz
    889  07A3  0276               	subwf	main@adnum,w
    890  07A4  1803               	skipnc
    891  07A5  2FA8               	goto	l1052
    892                           
-   893                           ;adc_pwm_p12.c: 126: {CCPR1L = 13;}
-   894  07A6  300D               	movlw	13
+   893                           ;adc_pwm_p12.c: 126: {CCPR1L = 20;}
+   894  07A6  3014               	movlw	20
    895  07A7  2FE1               	goto	L16
    896  07A8                     l1052:	
    897                           
-   898                           ;adc_pwm_p12.c: 127: else if(adnum > 224 && adnum <= 244)
+   898                           ;adc_pwm_p12.c: 127: else if(adnum > 235 && adnum <= 260)
    899  07A8  3000               	movlw	0
    900  07A9  0277               	subwf	main@adnum+1,w
-   901  07AA  30E1               	movlw	225
+   901  07AA  30EC               	movlw	236
    902  07AB  1903               	skipnz
    903  07AC  0276               	subwf	main@adnum,w
-   904  07AD  3000               	movlw	0
+   904  07AD  3001               	movlw	1
    905  07AE  1C03               	skipc
    906  07AF  2FB9               	goto	L33
    907  07B0  0277               	subwf	main@adnum+1,w
-   908  07B1  30F5               	movlw	245
+   908  07B1  3005               	movlw	5
    909  07B2  1903               	skipnz
    910  07B3  0276               	subwf	main@adnum,w
    911  07B4  1803               	skipnc
    912  07B5  2FB8               	goto	l1058
    913                           
-   914                           ;adc_pwm_p12.c: 128: {CCPR1L = 12;}
-   915  07B6  300C               	movlw	12
+   914                           ;adc_pwm_p12.c: 128: {CCPR1L = 19;}
+   915  07B6  3013               	movlw	19
    916  07B7  2FE1               	goto	L16
    917  07B8                     l1058:	
    918                           
-   919                           ;adc_pwm_p12.c: 129: else if(adnum > 244 && adnum <= 264)
-   920  07B8  3000               	movlw	0
+   919                           ;adc_pwm_p12.c: 129: else if(adnum > 260 && adnum <= 285)
+   920  07B8  3001               	movlw	1
    921  07B9                     L33:	
    922  07B9  0277               	subwf	main@adnum+1,w
-   923  07BA  30F5               	movlw	245
+   923  07BA  3005               	movlw	5
    924  07BB  1903               	skipnz
    925  07BC  0276               	subwf	main@adnum,w
    926  07BD  1C03               	skipc
    927  07BE  2FC8               	goto	l1064
    928  07BF  3001               	movlw	1
    929  07C0  0277               	subwf	main@adnum+1,w
-   930  07C1  3009               	movlw	9
+   930  07C1  301E               	movlw	30
    931  07C2  1903               	skipnz
    932  07C3  0276               	subwf	main@adnum,w
    933  07C4  1803               	skipnc
    934  07C5  2FC8               	goto	l1064
    935                           
-   936                           ;adc_pwm_p12.c: 130: {CCPR1L = 11;}
-   937  07C6  300B               	movlw	11
+   936                           ;adc_pwm_p12.c: 130: {CCPR1L = 18;}
+   937  07C6  3012               	movlw	18
    938  07C7  2FE1               	goto	L16
    939  07C8                     l1064:	
    940                           
    941                           ;adc_pwm_p12.c: 131: else
-   942                           ;adc_pwm_p12.c: 132: {CCPR1L = 10;}
-   943  07C8  300A               	movlw	10
+   942                           ;adc_pwm_p12.c: 132: {CCPR1L = 17;}
+   943  07C8  3011               	movlw	17
    944  07C9  2FE1               	goto	L16
    945  07CA                     l1068:	
    946  07CA  3001               	movlw	1
@@ -962,10 +962,10 @@ HI-TECH Software Omniscient Code Generator (PRO mode) build 6738
    956  07D1  3032               	movlw	50
    957  07D2  0092               	movwf	18	;volatile
    958                           
-   959                           ;adc_pwm_p12.c: 137: if(adnum <= 368)
+   959                           ;adc_pwm_p12.c: 137: if(adnum <= 380)
    960  07D3  3001               	movlw	1
    961  07D4  0277               	subwf	main@adnum+1,w
-   962  07D5  3071               	movlw	113
+   962  07D5  307D               	movlw	125
    963  07D6  1903               	skipnz
    964  07D7  0276               	subwf	main@adnum,w
    965  07D8  1803               	skipnc
@@ -1004,20 +1004,20 @@ HI-TECH Software Omniscient Code Generator (PRO mode) build 6738
    998  07E6  0870               	movf	?_Get_Ad,w
    999  07E7  00F6               	movwf	main@adnum
   1000                           
-  1001                           ;adc_pwm_p12.c: 122: if(adnum > 204 && adnum <= 286)
+  1001                           ;adc_pwm_p12.c: 122: if(adnum > 210 && adnum <= 310)
   1002  07E8  3000               	movlw	0
   1003  07E9  0277               	subwf	main@adnum+1,w
-  1004  07EA  30CD               	movlw	205
+  1004  07EA  30D3               	movlw	211
   1005  07EB  1903               	skipnz
   1006  07EC  0276               	subwf	main@adnum,w
   1007  07ED  1803               	btfsc	3,0
   1008  07EE  2F96               	goto	l1046
   1009  07EF                     l1066:	
   1010                           
-  1011                           ;adc_pwm_p12.c: 134: else if(adnum > 286 && adnum <= 450)
+  1011                           ;adc_pwm_p12.c: 134: else if(adnum > 310 && adnum <= 450)
   1012  07EF  3001               	movlw	1
   1013  07F0  0277               	subwf	main@adnum+1,w
-  1014  07F1  301F               	movlw	31
+  1014  07F1  3037               	movlw	55
   1015  07F2  1903               	skipnz
   1016  07F3  0276               	subwf	main@adnum,w
   1017  07F4  1803               	btfsc	3,0
@@ -1048,7 +1048,7 @@ HI-TECH Software Omniscient Code Generator (PRO mode) build 6738
   1042                           
   1043 ;; *************** function _PWM_Open *****************
   1044 ;; Defined at:
-  1045 ;;		line 186 in file "D:\STM32\PIC\adc_pwm_p12\adc_pwm_p12.c"
+  1045 ;;		line 186 in file "D:\GitHub\adc_pwm_p12\adc_pwm_p12.c"
   1046 ;; Parameters:    Size  Location     Type
   1047 ;;		None
   1048 ;; Auto vars:     Size  Location     Type
@@ -1095,7 +1095,7 @@ HI-TECH Software Omniscient Code Generator (PRO mode) build 6738
   1089                           
   1090 ;; *************** function _Time2_Config *****************
   1091 ;; Defined at:
-  1092 ;;		line 192 in file "D:\STM32\PIC\adc_pwm_p12\adc_pwm_p12.c"
+  1092 ;;		line 192 in file "D:\GitHub\adc_pwm_p12\adc_pwm_p12.c"
   1093 ;; Parameters:    Size  Location     Type
   1094 ;;		None
   1095 ;; Auto vars:     Size  Location     Type
@@ -1139,7 +1139,7 @@ HI-TECH Software Omniscient Code Generator (PRO mode) build 6738
   1133                           
   1134 ;; *************** function _Delay *****************
   1135 ;; Defined at:
-  1136 ;;		line 155 in file "D:\STM32\PIC\adc_pwm_p12\adc_pwm_p12.c"
+  1136 ;;		line 155 in file "D:\GitHub\adc_pwm_p12\adc_pwm_p12.c"
   1137 ;; Parameters:    Size  Location     Type
   1138 ;;  x               2    0[COMMON] unsigned int 
   1139 ;; Auto vars:     Size  Location     Type
@@ -1211,7 +1211,7 @@ HI-TECH Software Omniscient Code Generator (PRO mode) build 6738
   1205                           
   1206 ;; *************** function _Get_Ad *****************
   1207 ;; Defined at:
-  1208 ;;		line 176 in file "D:\STM32\PIC\adc_pwm_p12\adc_pwm_p12.c"
+  1208 ;;		line 176 in file "D:\GitHub\adc_pwm_p12\adc_pwm_p12.c"
   1209 ;; Parameters:    Size  Location     Type
   1210 ;;		None
   1211 ;; Auto vars:     Size  Location     Type
@@ -1278,7 +1278,7 @@ HI-TECH Software Omniscient Code Generator (PRO mode) build 6738
   1272                           
   1273 ;; *************** function _ADC_Init *****************
   1274 ;; Defined at:
-  1275 ;;		line 170 in file "D:\STM32\PIC\adc_pwm_p12\adc_pwm_p12.c"
+  1275 ;;		line 170 in file "D:\GitHub\adc_pwm_p12\adc_pwm_p12.c"
   1276 ;; Parameters:    Size  Location     Type
   1277 ;;		None
   1278 ;; Auto vars:     Size  Location     Type
@@ -1326,7 +1326,7 @@ HI-TECH Software Omniscient Code Generator (PRO mode) build 6738
   1320                           
   1321 ;; *************** function _Init *****************
   1322 ;; Defined at:
-  1323 ;;		line 162 in file "D:\STM32\PIC\adc_pwm_p12\adc_pwm_p12.c"
+  1323 ;;		line 162 in file "D:\GitHub\adc_pwm_p12\adc_pwm_p12.c"
   1324 ;; Parameters:    Size  Location     Type
   1325 ;;		None
   1326 ;; Auto vars:     Size  Location     Type
@@ -1382,7 +1382,7 @@ HI-TECH Software Omniscient Code Generator (PRO mode) build 6738
 
 
 HI-TECH Software PICC Macro Assembler V9.80 build 6738 
-Symbol Table                                                                                   Fri Apr 17 09:25:31 2020
+Symbol Table                                                                                   Wed May 20 17:51:25 2020
 
                   l452 05BA                    l461 0000                    l446 0000                    l455 0000  
                   l449 0000                    l385 06C4                    l458 0000                    l830 0000  

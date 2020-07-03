@@ -142,12 +142,12 @@ startup.obj
 startup.as
 66 0 0 CODE
 adc_pwm_p12.obj
-D:\STM32\PIC\adc_pwm_p12\adc_pwm_p12.c
+D:\GitHub\adc_pwm_p12\adc_pwm_p12.c
 4 2007 0 CONFIG
 adc_pwm_p12.as
 94 59F 0 CODE
 95 5A0 0 CODE
-D:\STM32\PIC\adc_pwm_p12\adc_pwm_p12.c
+D:\GitHub\adc_pwm_p12\adc_pwm_p12.c
 22 5E3 0 CODE
 23 5E4 0 CODE
 25 5E5 0 CODE
